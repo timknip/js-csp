@@ -26,6 +26,7 @@
     "chai": "~1.9.0",
     "gulp": "^3.8.10",
     "gulp-mocha": "^1.1.1",
+    "gulp-babel": "^5.1.0",
     "mocha": "~1.17.1",
     "transducers.js": "^0.3.0",
     "vinyl-source-stream": "^1.0.0"
@@ -37,7 +38,7 @@
     "test": "node --harmony ./node_modules/.bin/gulp test",
     "bundle": "node ./node_modules/.bin/gulp bundle"
   },
-  "main": "./src/csp.js",
+  "main": "./dist/csp.js",
   "files": [
     "src", "README.md", "CHANGELOG.md", "LICENSE"
   ]

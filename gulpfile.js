@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var babel = require("gulp-babel");
 var mocha = require("gulp-mocha");
 var browserify = require("browserify");
 var source = require('vinyl-source-stream');
@@ -34,6 +35,12 @@ gulp.task("bundle:node", function() {
 });
 
 gulp.task("bundle", ["bundle:node", "bundle:browser"]);
+
+gulp.task("build", function () {
+  return gulp.src(['./src/**/*.js'])
+    .pipe(babel())
+    .pipe(gulp.dest('dist'));
+});
 
 // TODO: Test bundles
 gulp.task("test", function() {
